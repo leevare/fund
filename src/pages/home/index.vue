@@ -27,21 +27,26 @@
 
 <script lang="ts">
 import { defineComponent, ref, watch, watchEffect, computed, onUnmounted } from 'vue';
+import axios from 'axios';
+import useDebounceRef from './useDebounceRef';
 import usePage from './usePage';
 import data from './data';
+
+type MatchItem = { code: string; shortcut: string; name: string; type: string };
+
 export default defineComponent({
   setup() {
-    const searchText = ref('');
-    const matchList = ref([]);
+    const searchText = useDebounceRef('');
+    const matchList = ref<MatchItem[]>([]);
     const showResult = ref(false);
     const searchRef = ref<HTMLDivElement>();
 
     watch(searchText, () => {
       const preList = searchText.value
-        ? data.filter((d) => d.includes(searchText.value.toUpperCase())).slice(0, 8)
+        ? data.filter((d) => d.some((input) => input.includes(searchText.value.toUpperCase()))).slice(0, 8)
         : [];
       matchList.value = preList.map((item) => {
-        const [code, shortcut, name, type] = item.split('|');
+        const [code, shortcut, name, type] = item;
         return { code, shortcut, name, type };
       });
     });
@@ -53,7 +58,7 @@ export default defineComponent({
     });
 
     const handleClick = (e: any) => {
-      if (e.target !== searchRef.value && !searchRef.value.contains(e.target)) {
+      if (e.target !== searchRef.value && !searchRef.value?.contains(e.target)) {
         showResult.value = false;
       }
     };
@@ -167,7 +172,7 @@ input {
     &.active {
       background-color: #efefef;
     }
-    /deep/ .active {
+    ::v-deep(.active) {
       color: #0171f6;
     }
   }
