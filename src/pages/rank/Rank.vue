@@ -133,7 +133,7 @@ export default defineComponent({
       })
       .then((res: AxiosResponse<RankData>) => {
         let data;
-        eval(`${res.data}data=rankData`);
+        eval(`${res.data};data=rankData`);
         rankList.value = data.datas.map((item, index) => {
           const [
             code,

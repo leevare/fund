@@ -27,94 +27,91 @@
 
 <script lang="ts">
 import { defineComponent, ref, watch, watchEffect, computed, onUnmounted } from 'vue';
-import axios from 'axios';
 import useDebounceRef from './useDebounceRef';
 import usePage from './usePage';
 import data from './data';
 
 type MatchItem = { code: string; shortcut: string; name: string; type: string };
 
-export default defineComponent({
-  setup() {
-    const searchText = useDebounceRef('');
-    const matchList = ref<MatchItem[]>([]);
-    const showResult = ref(false);
-    const searchRef = ref<HTMLDivElement>();
+export default defineComponent(() => {
+  const searchText = useDebounceRef('');
+  const matchList = ref<MatchItem[]>([]);
+  const showResult = ref(false);
+  const searchRef = ref<HTMLDivElement>();
 
-    watch(searchText, () => {
-      const preList = searchText.value
-        ? data.filter((d) => d.some((input) => input.includes(searchText.value.toUpperCase()))).slice(0, 8)
-        : [];
-      matchList.value = preList.map((item) => {
-        const [code, shortcut, name, type] = item;
-        return { code, shortcut, name, type };
-      });
+  watch(searchText, () => {
+    const preList = searchText.value
+      ? data.filter((d) => d.some((input) => input.includes(searchText.value.toUpperCase()))).slice(0, 8)
+      : [];
+    matchList.value = preList.map((item) => {
+      const [code, shortcut, name, type] = item;
+      return { code, shortcut, name, type };
     });
+  });
 
-    watchEffect(() => {
-      if (searchText.value) {
-        showResult.value = true;
-      }
-    });
-
-    const handleClick = (e: any) => {
-      if (e.target !== searchRef.value && !searchRef.value?.contains(e.target)) {
-        showResult.value = false;
-      }
-    };
-
-    document.body.addEventListener('click', handleClick, false);
-
-    onUnmounted(() => {
-      document.body.removeEventListener('click', handleClick, false);
-    });
-
-    const canShowResult = computed(() => showResult.value && matchList.value.length);
-
-    const { prev, next, page } = usePage(matchList, true);
-
-    const fundTypeColors = new Map([
-      ['混合型', '#d08a31'],
-      ['债券型', '#318fbb'],
-      ['股票型', '#ef0505'],
-      ['货币型', '#67bf43'],
-      ['定开债券', '#32af86'],
-      ['联接基金', '#8e26a7'],
-      ['QDII', '#d03077'],
-      ['QDII-指数', '#f562a4'],
-      ['股票指数', '#ce2222'],
-      ['混合-FOF', '#317929'],
-    ]);
-
-    const highlight = (text: string, keyword: string) =>
-      text.replace(new RegExp(keyword, 'ig'), `<span class='active'>${keyword}</span>`);
-
-    const handleSelect = () => {};
-
-    const handleExit = () => {
-      showResult.value = false;
-    };
-
-    const handleFocus = () => {
+  watchEffect(() => {
+    if (searchText.value) {
       showResult.value = true;
-    };
+    }
+  });
 
-    return {
-      searchText,
-      matchList,
-      fundTypeColors,
-      highlight,
-      handleKeydown: next,
-      handleKeyUp: prev,
-      handleExit,
-      handleSelect,
-      handleFocus,
-      showResult,
-      activeIndex: page,
-      canShowResult,
-      searchRef,
-    };
-  },
+  const handleClick = (e: any) => {
+    if (e.target !== searchRef.value && !searchRef.value?.contains(e.target)) {
+      showResult.value = false;
+    }
+  };
+
+  document.body.addEventListener('click', handleClick, false);
+
+  onUnmounted(() => {
+    document.body.removeEventListener('click', handleClick, false);
+  });
+
+  const canShowResult = computed(() => showResult.value && matchList.value.length);
+
+  const { prev, next, page } = usePage(matchList, true);
+
+  const fundTypeColors = new Map([
+    ['混合型', '#d08a31'],
+    ['债券型', '#318fbb'],
+    ['股票型', '#ef0505'],
+    ['货币型', '#67bf43'],
+    ['定开债券', '#32af86'],
+    ['联接基金', '#8e26a7'],
+    ['QDII', '#d03077'],
+    ['QDII-指数', '#f562a4'],
+    ['股票指数', '#ce2222'],
+    ['混合-FOF', '#317929'],
+  ]);
+
+  const highlight = (text: string, keyword: string) =>
+    text.replace(new RegExp(keyword, 'ig'), `<span class='active'>${keyword}</span>`);
+
+  const handleSelect = () => {};
+
+  const handleExit = () => {
+    showResult.value = false;
+  };
+
+  const handleFocus = () => {
+    showResult.value = true;
+  };
+
+  return {
+    searchText,
+    matchList,
+    fundTypeColors,
+    highlight,
+    handleKeydown: next,
+    handleKeyUp: prev,
+    handleExit,
+    handleSelect,
+    handleFocus,
+    showResult,
+    activeIndex: page,
+    canShowResult,
+    searchRef,
+  };
 });
 </script>
 

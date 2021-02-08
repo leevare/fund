@@ -4,13 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17dc4722-731f-4129-8700-6ac487e7b47f" name="Default Changelist" comment="" />
+    <list default="true" id="17dc4722-731f-4129-8700-6ac487e7b47f" name="Default Changelist" comment="feat: 添加基金排行">
+      <change afterPath="$PROJECT_DIR$/src/pages/graph/Graph.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/next/Next.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/rank/Rank.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/rank/Rank.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="leevare &lt;karyelpersonal@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1hfhK69Z7UCyQbnNFeFWundOjYV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,13 +42,14 @@
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs.protractor.protractor_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettier.files.pattern" value="{**/*,*}.{js,ts,jsx,tsx,vue}" />
     <property name="prettierjs.PrettierConfiguration.Package" value="F:\program\js\vue-app\node_modules\prettier" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="ts.external.directory.path" value="F:\program\js\vue-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -49,33 +67,77 @@
       <option name="presentableId" value="Default" />
       <updated>1600407987475</updated>
       <workItem from="1600407988514" duration="1096000" />
-      <workItem from="1600409119807" duration="9826000" />
+      <workItem from="1600409119807" duration="11748000" />
+      <workItem from="1600650757119" duration="938000" />
+      <workItem from="1600658861934" duration="13831000" />
+      <workItem from="1600735547399" duration="7855000" />
+      <workItem from="1600756193926" duration="9469000" />
+      <workItem from="1600824991398" duration="38000" />
+      <workItem from="1600826126340" duration="4243000" />
+      <workItem from="1600839264147" duration="1101000" />
+      <workItem from="1600908785520" duration="7530000" />
+      <workItem from="1600936791563" duration="2068000" />
+      <workItem from="1600995230737" duration="6391000" />
+      <workItem from="1601170451336" duration="927000" />
+      <workItem from="1605767221019" duration="2000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: 添加基金排行">
+      <created>1600680978784</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600680978784</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: 添加基金排行" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 添加基金排行" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1388" y="410" key="#ESLint" timestamp="1600408837969">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1388" y="410" key="#ESLint/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600408837969" />
-    <state x="1026" y="164" key="SettingsEditor" timestamp="1600409437770">
+    <state x="833" y="176" width="849" height="740" key="#Plugins" timestamp="1600936936129">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1026" y="164" key="SettingsEditor/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600409437770" />
-    <state width="831" height="303" key="javadoc.popup.new" timestamp="1600411282062">
+    <state x="833" y="176" width="849" height="740" key="#Plugins/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600936936129" />
+    <state x="979" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600742217487">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="831" height="303" key="javadoc.popup.new/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600411282062" />
+    <state x="979" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600742217487" />
+    <state x="1123" y="195" key="CommitChangelistDialog2" timestamp="1600680975962">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1123" y="195" key="CommitChangelistDialog2/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600680975962" />
+    <state x="1303" y="278" key="FileChooserDialogImpl" timestamp="1600831818962">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1303" y="278" key="FileChooserDialogImpl/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600831818962" />
+    <state x="1026" y="164" key="SettingsEditor" timestamp="1600742243381">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1026" y="164" key="SettingsEditor/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600742243381" />
+    <state x="1117" y="256" key="Vcs.Push.Dialog.v2" timestamp="1600680982674">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1117" y="256" key="Vcs.Push.Dialog.v2/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600680982674" />
+    <state width="831" height="303" key="javadoc.popup.new" timestamp="1601003188438">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="831" height="303" key="javadoc.popup.new/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1601003188438" />
     <state x="550" y="0" width="2008" height="1038" key="recent.locations.popup" timestamp="1600409347008">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="550" y="0" width="2008" height="1038" key="recent.locations.popup/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600409347008" />
-    <state x="1188" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1600411630252">
+    <state x="1188" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1600936838645">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1188" y="229" width="672" height="678" key="search.everywhere.popup/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600411630252" />
+    <state x="1188" y="229" width="672" height="678" key="search.everywhere.popup/2560.163.1280.984/0.0.2560.1040@0.0.2560.1040" timestamp="1600936838645" />
   </component>
 </project>

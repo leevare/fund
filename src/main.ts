@@ -4,4 +4,6 @@ import App from './App.vue';
 import 'normalize.css';
 import './index.css';
 
-createApp(App).use(router).mount('#app');
+const instance = createApp(App);
+instance.use(router).mount('#app');
+console.log(instance);
